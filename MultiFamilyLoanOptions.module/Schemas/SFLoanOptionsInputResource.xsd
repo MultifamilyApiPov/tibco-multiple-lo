@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1543949000927" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1543949000927">
+  <complexType name="SFLoanOptionsInputElementType">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="records">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="attributes">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="referenceId" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="Deal__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Formula_Version__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Loan_Amount__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Type__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Status__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Comments__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Interest_Type__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Variable_Product_Type__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Lien_Position__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Supplemental_Type__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Exercising_Tier_Dropping_Option__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Loan_Term_months__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Interest_Only_Period_months__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Amortization_Term_months__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Loss_Sharing_Percent__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Prepayment_Component_1__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Prepayment_Component_to_Months_1__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Prepayment_Component_2__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Prepayment_Component_to_Months_2__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Declining_Premium_Schedule__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Other_Prepayment_Premium_Schedule__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Property_Gross_Potential_Rent_Amount__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Property_Other_Income_Amount__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Property_Management_Expense_Amount__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Property_Real_Estate_Tax_Amount__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Property_Insurance_Expense_Amount__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Property_Other_Expense_Amount__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Property_Replacement_Reserve_Annual_Amou__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Property_Actual_Cooperative_NCF__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Property_Purchase_Price__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Property_Cost__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Property_Underwritten_Value__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Property_Total_Number_of_Units__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Economic_Vacancy_Amount__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="X1st_Lien_Interest_Type__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="X1st_Lien_Original_Loan_Amount__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X1st_Lien_Actual_Interest_Rate__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X1st_Lien_Loan_Term_months__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X1st_Lien_Interest_Only_Period_months__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X1st_Lien_Amortization_Term_months__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X1st_Lien_Variable_UW_Interest_Rate__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X1st_Lien_Purchased_Cap_Stike_Rate__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X1st_Lien_Interest_Basis__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="X1st_Lien_Loan_Maturity_Date__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="X1st_Lien_Current_UPB_Amount__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X1st_Lien_Required_Min_DSCR_for_Loan_Siz__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X2nd_Lien_Interest_Type__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="X2nd_Lien_Original_Loan_Amount__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X2nd_Lien_Actual_Interest_Rate__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X2nd_Lien_Loan_Term_months__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X2nd_Lien_Interest_Only_Period_months__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X2nd_Lien_Amortization_Term_months__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X2nd_Lien_Variable_UW_Interest_Rate__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X2nd_Lien_Purchased_Cap_Stike_Rate__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X2nd_Lien_Interest_Basis__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="X2nd_Lien_Loan_Maturity_Date__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="X2nd_Lien_Current_UPB_Amount__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="X2nd_Lien_Required_Min_DSCR_for_Loan_Siz__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Pricing_Method__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Green_Financing_Type__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Latest_Pricing_Memo_Guaranty_Fee__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Latest_Pricing_Memo_Servicing_Fee__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Commitment_Period_days__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Rate_Lock_Type__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Interest_Basis__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Loan_Purchase_Price_of_par__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Excess_Origination_Premium_Amount__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Estimated_Origination_Fee__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Origination_Fee_Paid_to_Broker__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Origination_Fee_Paid_to_Correspondent__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Fixed_Index_Rate_Type__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Treasury_Rate__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Total_Fixed_Rate_Investor_Spread__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Requested_Fixed_Rate_Guaranty_Fee__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Requested_Fixed_Rate_Servicing_Fee__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Other_Fixed_Rate_Fee_or_Spread__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Index_Rate_Type__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Index_Rate__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Total_Variable_Rate_Investor_Spread__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Requested_Variable_Rate_Guaranty_Fee__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Requested_Variable_Rate_Servicing_Fee__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Cap_Cost_Factor__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Stress__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="SARM_Initial_Cap_Term_yrs__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="SARM_Min_Cap_Strike_Rate__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="UW_Interest_Rate_Floor_per_Guide__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Tier_Level__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Tier_Minimum_Actual_Cooperative_DSCR__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Tier_Minimum_Underwritten_DSCR__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Tier_Maximum_LTV__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Fixed_Rate_Test_Actual_Cooperative_DSCR__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Fixed_Rate_Test_Underwritten_DSCR__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Fixed_Rate_Test_LTV__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Requested_Tier_Level__c" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Requested_Min_Actual_Cooperative_DSCR__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Requested_Minimum_Underwritten_DSCR__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Requested_Minimum_Actual_DSCR__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Requested_Maximum_LTV__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Requested_Maximum_LTC__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Fixed_Rate_Test_Req_Actual_Co_op_DSCR__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Fixed_Rate_Test_Requested_UW_DSCR__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Requested_Fixed_Rate_Test_Min_Amortizing__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Fixed_Rate_Test_Requested_LTV__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Alternate_Exit_Refinance_Costs__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Alternate_Exit_Amortization_Term__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Alternate_Exit_Minimum_DSCR__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Alternate_Exit_Maximum_LTV__c" type="double"/>
+            <element maxOccurs="1" minOccurs="0" name="Alternate_Exit_Refinance_Interest_Rate__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Alternate_Exit_Maximum_Terminal_Cap_Rate__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Mezzanine_and_Preferred_Equity_Debt_Serv__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Subordinate_Financing_1__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Subordinate_Financing_2__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Subordinate_Financing_3__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Mezz_Preferred_Equity_1__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Mezz_Preferred_Equity_2__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="LIHTC_Equity__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Other_Sources__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Payoff_Existing_Mortgage_Loan__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Prepayment_Premium__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Development_Construction_Cost__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Payoff_Affiliated_Mezz_Pref_Equity__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Payoff_Unaffiliated_Mezz_Pref_Equity__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Funded_Capital_Improvements__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Funded_Initial_Replacement_Reserves__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Funded_Completion_Repairs__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Funded_Other_Escrows__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Interest_Rate_Cap_Hedging_Fees__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Origination_Fees__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Lender_Closing_Transaction_Fees__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Third_Party_Closing_Transaction_Fees__c" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="Other_Uses__c" type="integer"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="SFLoanOptionsInputElement" type="tns:SFLoanOptionsInputElementType"/>
+</schema>

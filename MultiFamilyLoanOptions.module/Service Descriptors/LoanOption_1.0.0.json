@@ -1,0 +1,894 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "LoanOption",
+    "description": "Loan Option 1.0 endpoint",
+    "version": "1.0.0",
+    "x-lastModified": "Nov 28, 2018 08:22AM PST"
+  },
+  "host": "mocksvc.mulesoft.com",
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "definitions": {
+    "LoanOptions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/LoanOption"
+      }
+    },
+    "LoanOption": {
+      "type": "object",
+      "properties": {
+        "dealId": {
+          "example": 12345,
+          "type": "integer"
+        },
+        "loanAmount": {
+          "minimum": 1,
+          "maximum": 10000000000000000,
+          "format": "double",
+          "example": 25000000,
+          "type": "number"
+        },
+        "Type": {
+          "example": "Ask",
+          "type": "string"
+        },
+        "Status": {
+          "default": "Draft",
+          "example": "Draft",
+          "enum": [
+            "Draft"
+          ],
+          "type": "string"
+        },
+        "Comments": {
+          "minLength": 0,
+          "maxLength": 200,
+          "example": "This is a comment.",
+          "type": "string"
+        },
+        "interestType": {
+          "example": "Variable Rate",
+          "enum": [
+            "Fixed Rate",
+            "Variable Rate"
+          ],
+          "type": "string"
+        },
+        "variableProductType": {
+          "example": "SARM",
+          "enum": [
+            "SARM",
+            "DMBS",
+            "ARM 7/6",
+            "ARM 7/4",
+            "Fixed+1"
+          ],
+          "type": "string"
+        },
+        "lienPosition": {
+          "minimum": 1,
+          "maximum": 3,
+          "example": 1,
+          "type": "integer"
+        },
+        "supplementalType": {
+          "example": "Coterminous",
+          "enum": [
+            "Coterminous",
+            "Non-Coterminous",
+            "DUS Split 2nd",
+            "New Loan Test"
+          ],
+          "type": "string"
+        },
+        "exercisingTierDroppingOption": {
+          "example": "Yes",
+          "enum": [
+            "Yes",
+            "No"
+          ],
+          "type": "string"
+        },
+        "loanTermMonths": {
+          "minimum": 1,
+          "maximum": 480,
+          "example": 120,
+          "type": "integer"
+        },
+        "interestOnlyPeriodMonths": {
+          "minimum": 0,
+          "maximum": 480,
+          "example": 24,
+          "type": "integer"
+        },
+        "amortizationTermMonths": {
+          "minimum": 1,
+          "maximum": 480,
+          "example": 360,
+          "type": "integer"
+        },
+        "lossSharingPercent": {
+          "minimum": 0,
+          "maximum": 100,
+          "format": "double",
+          "example": 100,
+          "type": "number"
+        },
+        "prepaymentComponent1": {
+          "example": "Yield Maintenance",
+          "enum": [
+            "Yield Maintenance",
+            "Prepayment Lockout",
+            "Declining Premium",
+            "Defeasance",
+            "Defeasance Lockout",
+            "Fee Maintenance",
+            "Other Prepayment Premium",
+            "1%  Fixed Prepayment"
+          ],
+          "type": "string"
+        },
+        "prepaymentComponenttoMonths1": {
+          "minimum": 0,
+          "maximum": 480,
+          "example": 174,
+          "type": "integer"
+        },
+        "prepaymentComponent2": {
+          "example": "1%  Fixed Prepayment",
+          "enum": [
+            "Yield Maintenance",
+            "Prepayment Lockout",
+            "Declining Premium",
+            "Defeasance",
+            "Defeasance Lockout",
+            "Fee Maintenance",
+            "Other Prepayment Premium",
+            "1%  Fixed Prepayment"
+          ],
+          "type": "string"
+        },
+        "prepaymentComponenttoMonths2": {
+          "minimum": 0,
+          "maximum": 480,
+          "example": 177,
+          "type": "integer"
+        },
+        "decliningPremiumSchedule": {
+          "example": "5-4-3-2-1-1-1-1-1-1",
+          "enum": [
+            "5-4-3-2-1-1-1-1-1-1",
+            "5-1-1-1-1-1-1-1-1-1",
+            "5-4-3-2-1-1-1",
+            "5-1-1-1-1-1-1",
+            "5-4-3-2-1",
+            "5-5-4-4-3-3-2-2-1-1",
+            "10-10-5-4-3-2-1",
+            "5-1-1-1-1",
+            "5-5-5-5-4-4-3-3-2-2-1-1",
+            "5-5-5-5-5-5-5-4-4-3-3-2-2-1-1",
+            "5-5-5-5-5-5-5-4-4-3-3-2-2-1-1-1-1-1",
+            "5-5-5-5-5-5-5-4-4-3-3-2-2-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1"
+          ],
+          "type": "string"
+        },
+        "otherPrepaymentPremiumSchedule": {
+          "example": "5-5-5-2-2-1-1-1-1-1",
+          "type": "string"
+        },
+        "propertyGrossPotentialRent": {
+          "minimum": 0,
+          "format": "double",
+          "example": 2504467,
+          "type": "number"
+        },
+        "propertyEconomicVacancyAmount": {
+          "format": "double",
+          "example": -125223.35,
+          "type": "number"
+        },
+        "propertyOtherIncome": {
+          "minimum": 0,
+          "format": "double",
+          "example": 40230.35,
+          "type": "number"
+        },
+        "propertyManagementFee": {
+          "minimum": 0,
+          "format": "double",
+          "example": 60486.85,
+          "type": "number"
+        },
+        "propertyRealEstateTaxes": {
+          "minimum": 0,
+          "format": "double",
+          "example": 190000,
+          "type": "number"
+        },
+        "propertyInsurance": {
+          "minimum": 0,
+          "format": "double",
+          "example": 92788,
+          "type": "number"
+        },
+        "propertyOtherExpenses": {
+          "minimum": 0,
+          "format": "double",
+          "example": 858736.15,
+          "type": "number"
+        },
+        "propertyReplacementReserves": {
+          "minimum": 0,
+          "format": "double",
+          "example": 27000,
+          "type": "number"
+        },
+        "propertyActualCooperativeNCF": {
+          "format": "double",
+          "example": 85000,
+          "type": "number"
+        },
+        "propertyPurchasePrice": {
+          "minimum": 0,
+          "format": "double",
+          "example": 1500000,
+          "type": "number"
+        },
+        "propertyCost": {
+          "minimum": 0,
+          "format": "double",
+          "example": 1500000,
+          "type": "number"
+        },
+        "propertyUnderwrittenValue": {
+          "minimum": 0,
+          "format": "double",
+          "example": 15872826.67,
+          "type": "number"
+        },
+        "propertyUnitCount": {
+          "minimum": 5,
+          "example": 250,
+          "type": "integer"
+        },
+        "x1stLienInterestType": {
+          "example": "Fixed Rate",
+          "enum": [
+            "Fixed Rate",
+            "Variable Rate"
+          ],
+          "type": "string"
+        },
+        "x1stLienOriginalLoanAmount": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "x1stLienActualFixedFixedEquivalentInterestRate": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "x1stLienLoanTermMonths": {
+          "example": 0,
+          "type": "integer"
+        },
+        "x1stLienInterestOnlyPeriodMonths": {
+          "example": 0,
+          "type": "integer"
+        },
+        "x1stLienAmortizationTermMonths": {
+          "example": 0,
+          "type": "integer"
+        },
+        "x1stLienVariableUWInterestRate": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "x1stLienPurchasedCapStrikeRate": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "x1stLienInterestBasis": {
+          "example": "Actual/360",
+          "enum": [
+            "Actual/360",
+            "30/360"
+          ],
+          "type": "string"
+        },
+        "x1stLienLoanMaturityDate": {
+          "example": "1900-01-01",
+          "type": "string",
+          "format": "date"
+        },
+        "x1stLienCurrentUPBAmount": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "x1stLienRequiredMinDSCRforLoanSizing": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "x2ndLienInterestType": {
+          "example": "Fixed Rate",
+          "enum": [
+            "Fixed Rate",
+            "Variable Rate"
+          ],
+          "type": "string"
+        },
+        "x2ndLienOriginalLoanAmount": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "x2ndLienActualFixedFixedEquivalentInterestRate": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "x2ndLienLoanTermMonths": {
+          "example": 0,
+          "type": "integer"
+        },
+        "x2ndLienInterestOnlyPeriodMonths": {
+          "example": 0,
+          "type": "integer"
+        },
+        "x2ndLienAmortizationTermMonths": {
+          "example": 0,
+          "type": "integer"
+        },
+        "x2ndLienVariableUWInterestRate": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "x2ndLienPurchasedCapStrikeRate": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "x2ndLienInterestBasis": {
+          "example": "Actual/360",
+          "enum": [
+            "Actual/360",
+            "30/360"
+          ],
+          "type": "string"
+        },
+        "x2ndLienLoanMaturityDate": {
+          "example": "1900-01-01",
+          "type": "string",
+          "format": "date"
+        },
+        "x2ndLienCurrentUPBAmount": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "x2ndLienRequiredMinDSCRforLoanSizing": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "pricingMethod": {
+          "example": "Standard",
+          "enum": [
+            "Standard",
+            "Enhanced Standard",
+            "Tier Plus",
+            "Tier Plus/Plus",
+            "First Level Lender Delegated",
+            "Second Level Lender Delegated"
+          ],
+          "type": "string"
+        },
+        "greenFinancingType": {
+          "example": "N/A",
+          "enum": [
+            "N/A",
+            "Green Rewards",
+            "Green Preservation Plus",
+            "Green Building Certification "
+          ],
+          "type": "string"
+        },
+        "latestPricingMemoGuarantyFee": {
+          "format": "double",
+          "example": 1.12,
+          "type": "number"
+        },
+        "latestPricingMemoServicingFee": {
+          "format": "double",
+          "example": 0.29,
+          "type": "number"
+        },
+        "commitmentPerioddays": {
+          "example": 60,
+          "type": "integer"
+        },
+        "rateLockType": {
+          "example": "Standard",
+          "enum": [
+            "Standard",
+            "Streamlined"
+          ],
+          "type": "string"
+        },
+        "interestBasis": {
+          "example": "Actual/360",
+          "enum": [
+            "Actual/360",
+            "30/360"
+          ],
+          "type": "string"
+        },
+        "loanPurchasePriceofpar": {
+          "format": "double",
+          "example": 101,
+          "type": "number"
+        },
+        "excessOriginationPremiumAmount": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "estimatedOriginationFee": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "originationFeePaidtoBroker": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "originationFeePaidtoCorrespondent": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "fixedIndexRateType": {
+          "example": "10-Year Treasury Note",
+          "enum": [
+            "1-Month Treasury Bill",
+            "3-Month Treasury Bill",
+            "6-Month Treasury Bill",
+            "1-Year Treasury Note",
+            "2-Year Treasury Note",
+            "3-Year Treasury Note",
+            "5-Year Treasury Note",
+            "7-Year Treasury Note",
+            "10-Year Treasury Note",
+            "30-Year Treasury Note"
+          ],
+          "type": "string"
+        },
+        "treasuryRate": {
+          "format": "double",
+          "example": 1.37,
+          "type": "number"
+        },
+        "totalFixedRateInvestorSpread": {
+          "format": "double",
+          "example": 1.39,
+          "type": "number"
+        },
+        "requestedFixedRateGuarantyFee": {
+          "format": "double",
+          "example": 0.9,
+          "type": "number"
+        },
+        "requestedFixedRateServicingFee": {
+          "format": "double",
+          "example": 0.21,
+          "type": "number"
+        },
+        "otherFixedRateFeeSpread": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "indexRateType": {
+          "example": "1 Month LIBOR",
+          "enum": [
+            "11 FHLB COFI (1 Month)",
+            "11 FHLB COFI (6 Month)",
+            "1 Year CMT Weekly Average Treasury",
+            "3 Year CMT Weekly Average Treasury",
+            "5 Year CMT Weekly Average Treasury",
+            "Wall Street Journal Prime Rate",
+            "1 Month LIBOR",
+            "3 Month LIBOR",
+            "6 Month LIBOR"
+          ],
+          "type": "string"
+        },
+        "indexRate": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "totalVariableRateInvestorSpread": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "requestedVariableRateGuarantyFee": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "requestedVariableRateServicingFee": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "capCostFactor": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "underwrittenStressMaxLifetimePassThruRate": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "sARMInitialCapTermMonths": {
+          "example": 0,
+          "type": "integer"
+        },
+        "sARMMinCapStrikeRate": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "uWInterestRateFloorperGuide": {
+          "format": "double",
+          "example": 3.87,
+          "type": "number"
+        },
+        "guideTierLevel": {
+          "example": "Tier 4",
+          "enum": [
+            "Tier 2",
+            "Tier 3",
+            "Tier 4"
+          ],
+          "type": "string"
+        },
+        "guideMinActualCooperativeDSCR": {
+          "format": "double",
+          "example": 1,
+          "type": "number"
+        },
+        "guideMinUWDSCRperGuide": {
+          "format": "double",
+          "example": 1.55,
+          "type": "number"
+        },
+        "guideMaximumLTV": {
+          "format": "double",
+          "example": 55,
+          "type": "number"
+        },
+        "guideFRTMinActualCooperativeDSCR": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "guideFRTMinUWDSCRperGuide": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "guideFRTLTV": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "requestedTierLevel": {
+          "example": "Tier 4",
+          "enum": [
+            "Tier 2",
+            "Tier 3",
+            "Tier 4"
+          ],
+          "type": "string"
+        },
+        "requestedMinActualCooperativeDSCR": {
+          "format": "double",
+          "example": 1,
+          "type": "number"
+        },
+        "requestedMinUWDSCRperGuide": {
+          "format": "double",
+          "example": 5,
+          "type": "number"
+        },
+        "requestedMinAmortizingUWNCFDSCR": {
+          "format": "double",
+          "example": 1,
+          "type": "number"
+        },
+        "requestedMaximumLTV": {
+          "format": "double",
+          "example": 25,
+          "type": "number"
+        },
+        "requestedMaximumLTC": {
+          "format": "double",
+          "example": 80,
+          "type": "number"
+        },
+        "requestedFRTMinActualNCFCOOPDSCR": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "requestedFRTMinUWDSCRperGuide": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "requestedFRTMinAmortizingUWNCFDSCR": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "requestedFRTLTV": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "expectedExitRefinanceCosts": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "expectedExitAmortizationTerm": {
+          "example": 360,
+          "type": "integer"
+        },
+        "expectedExitMinUWDSCRperGuide": {
+          "format": "double",
+          "example": 1.25,
+          "type": "number"
+        },
+        "expectedExitMaximumLTV": {
+          "format": "double",
+          "example": 80,
+          "type": "number"
+        },
+        "expectedExitRefinanceInterestRate": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "expectedExitTerminalCapRate": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "mezzanineandPreferredEquityDebtService": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "subordinateFinancing1": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "subordinateFinancing2": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "subordinateFinancing3": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "mezzPreferredEquity1": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "mezzPreferredEquity2": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "lIHTCEquity": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "otherSources": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "payoffExistingMortgageLoan": {
+          "format": "double",
+          "example": 1088000,
+          "type": "number"
+        },
+        "prepaymentPremium": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "propertyDevelopmentConstructionCost": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "affiliatedMezzanineDebtorPreferredEquityPayoff": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "nonAffiliatedMezzanineDebtorPreferredEquityPayoff": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "propertyFundedCapitalImprovements": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "propertyFundedCapitalExpendituresReplacementReserveAccount": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "propertyFundedCompletionRepairs": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "propertyFundedOtherEscrows": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "interestRateCapHedgingFees": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "originationFees": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "lenderClosingTransactionFees": {
+          "format": "double",
+          "example": 50000,
+          "type": "number"
+        },
+        "thirdPartyClosingTransactionFees": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        },
+        "otherUses": {
+          "format": "double",
+          "example": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "dealId",
+        "Type",
+        "Status",
+        "interestType",
+        "lienPosition",
+        "loanTermMonths",
+        "interestOnlyPeriodMonths",
+        "amortizationTermMonths",
+        "lossSharingPercent",
+        "prepaymentComponent1",
+        "prepaymentComponenttoMonths1",
+        "propertyGrossPotentialRent",
+        "propertyEconomicVacancyAmount",
+        "propertyOtherIncome",
+        "propertyManagementFee",
+        "propertyRealEstateTaxes",
+        "propertyInsurance",
+        "propertyOtherExpenses",
+        "propertyReplacementReserves",
+        "propertyUnderwrittenValue",
+        "propertyUnitCount",
+        "pricingMethod",
+        "greenFinancingType",
+        "latestPricingMemoGuarantyFee",
+        "latestPricingMemoServicingFee",
+        "commitmentPerioddays",
+        "rateLockType",
+        "interestBasis",
+        "fixedIndexRateType",
+        "treasuryRate",
+        "totalFixedRateInvestorSpread",
+        "requestedFixedRateGuarantyFee",
+        "requestedFixedRateServicingFee",
+        "otherFixedRateFeeSpread",
+        "guideMinUWDSCRperGuide",
+        "guideMaximumLTV",
+        "requestedMinUWDSCRperGuide",
+        "requestedMinAmortizingUWNCFDSCR",
+        "requestedMaximumLTV"
+      ]
+    },
+    "BadRequest": {
+      "type": "object",
+      "properties": {
+        "errorMsg": {
+          "type": "string",
+          "default": "Business Validation error"
+        }
+      }
+    }
+  },
+  "paths": {
+    "/loanoption": {
+      "post": {
+        "description": "Creates a new Loan Option",
+        "operationId": "addLoanOption",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "loanOptionId": {
+                  "description": "Loan Option Identifier",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "loanOptionId"
+              ]
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/BadRequest"
+            }
+          }
+        },
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Loan Option Request",
+            "schema": {
+              "$ref": "#/definitions/LoanOptions"
+            }
+          }
+        ],
+        "summary": "Add a new Loan Option"
+      }
+    }
+  }
+}

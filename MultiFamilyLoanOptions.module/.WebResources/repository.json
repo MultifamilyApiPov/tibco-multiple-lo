@@ -1,0 +1,16 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [{
+            "localTimestamp": 1543429189582,
+            "localURI": "/MultiFamilyLoanOptions.module/Service Descriptors/LoanOption_1.0.0.json",
+            "disabled": false,
+            "remoteTimestamp": 1543447065000,
+            "localHash": "edd5f777e4c9859496af67b8ddcb22164453a10e",
+            "remoteId": "32",
+            "remoteHash": "edd5f777e4c9859496af67b8ddcb22164453a10e"
+        }],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": []
+}

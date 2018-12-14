@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:JsonSchema="/T1543429189676Converted/JsonSchema" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_Hl-HsPM6Eeij_uHxG5bjKA" targetNamespace="http://tns.tibco.com/bw/composite/MultiFamilyLoanOptions.module" name="MultiFamilyLoanOptions.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_MX3wcvM6Eeij_uHxG5bjKA" name="loanoption" promote="ComponentProcess/loanoption">
+    <sca:interface.wsdl xmi:id="_MX3wdvM6Eeij_uHxG5bjKA" interface="http://xmlns.example.com/20181128131918PLT#wsdl.interface(loanoption)" scaext:wsdlLocation="../Processes/multifamilyloanoptions/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_MX3wd_M6Eeij_uHxG5bjKA" name="RestService" path="/loanoption" docBasePath="http://localhost:7777/MultiFamilyLoanOptions.module" docResourcePath="Loanoption" basePath="/" connector="multifamilyloanoptions.module.Process" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/LoanOption_1.0.0.json" startJobOnInputException="true" enforceBWServiceResponse="true">
+      <operation xmi:id="_MYA6YPM6Eeij_uHxG5bjKA" operationName="post" nickname="addLoanOption" httpMethod="POST" notes="Creates a new Loan Option" responseStyle="element" requestStyle="element">
+        <responseStatus xmi:id="_MYnXUPM6Eeij_uHxG5bjKA" statusCode="201" reasonPhrase="Created" dataType="object"/>
+        <responseStatus xmi:id="_MYnXUfM6Eeij_uHxG5bjKA" statusCode="400" reasonPhrase="Bad Request" elementQName="JsonSchema:BadRequest"/>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_MYnXU_M6Eeij_uHxG5bjKA"/>
+      <import xmi:id="_MYnXUvM6Eeij_uHxG5bjKA" importType="http://www.w3.org/2001/XMLSchema" namespace="/T1543429189676Converted/JsonSchema"/>
+      <advancedConfig xmi:id="_MX3wePM6Eeij_uHxG5bjKA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_MYA6YfM6Eeij_uHxG5bjKA" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_HtHRgPM6Eeij_uHxG5bjKA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_HtQbcPM6Eeij_uHxG5bjKA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_HtQbcfM6Eeij_uHxG5bjKA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_HtQbcvM6Eeij_uHxG5bjKA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_HtaMcPM6Eeij_uHxG5bjKA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_HtaMcfM6Eeij_uHxG5bjKA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_F7mlsPM8Eeij_uHxG5bjKA" name="salesforce.wsdl" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_HpFtIPM6Eeij_uHxG5bjKA" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_HpFtIfM6Eeij_uHxG5bjKA" processName="multifamilyloanoptions.module.Process"/>
+    <sca:service xmi:id="_MX3wcPM6Eeij_uHxG5bjKA" name="loanoption">
+      <sca:interface.wsdl xmi:id="_MX3wcfM6Eeij_uHxG5bjKA" interface="http://xmlns.example.com/20181128131918PLT#wsdl.interface(loanoption)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
